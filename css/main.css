@@ -1,0 +1,139 @@
+@import "init.css";
+@import "../components/common.menu-button/menu-button.css";
+@import "../components/common.upper-menu/upper-menu.css";
+@import "../components/common.vertical-divider/vertical-divider.css";
+@import "../components/common.primary-header/primary-header.css";
+/* @import "debug.css"; */
+
+
+/* ----------------- HEADER BLOCK ------------------ */
+.header__upper-menu {
+  min-height: 88px;
+}
+.header__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-basis: 50px;
+}
+.header__center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 60%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.header__logo {
+  width: 96px;
+  height: 51px;
+  flex-grow: 3;
+}
+.header__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-basis: 100px;
+}
+
+/*----------- .MAIN BLOCK -----------------*/
+.main{
+  background: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+.main__primary-header { 
+  margin-left: 0px; 
+  margin-top: 24px;
+}
+.main__horizontal-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap:19px;
+  margin-top:24px;
+  overflow: hidden;
+}
+.menu-item{
+  min-width: fit-content;
+  background: #F8F8F8;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  height: 40px;
+  padding: 8px 20px;
+  color: #7E7E82;
+  border: none;
+  margin-left: 16px;
+}
+.main__horizontal-menu-item_active{
+  background: #FFFFFF;
+  border: 2px solid #B8FFEC;
+  border-radius: 6px;
+}
+.main__content{
+  margin-top:24px;
+  margin-left:16px;
+}
+
+/*----------- MEDIA QUERY BLOCK------------------*/
+@media screen and (max-width: 321px) {
+  .header__vertical-divider-left {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contacts-menu {
+    display: none;
+  }
+  .header__center {
+    flex-basis: content;
+  }
+  .main__primary-header{
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main__horizontal-menu{    
+    margin-top:32px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .header__left,
+  .header__center,
+  .vertical-divider {
+    display: none;
+  }
+  .header__upper-menu {
+    padding-top: 42px;
+    justify-content: flex-end;
+  }
+  .header__right {
+    flex-basis: 30%;
+  }
+  .menu-button__text {
+    display: inline;
+  }
+  .main{
+    margin-top: -6.4rem;
+  }
+  .main__primary-header{
+    margin-left: 0px;
+    gap: 30px;
+  }
+  .primary-header__marker{
+    width: 3px;
+    border-radius: 1.5px;
+  }
+  .main__horizontal-menu{
+    margin-top:8px;
+  }
+}

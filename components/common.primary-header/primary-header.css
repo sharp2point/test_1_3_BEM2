@@ -1,0 +1,21 @@
+.primary-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  line-height: 40px;
+  font-weight: 900;
+  gap: 20px;
+  overflow: hidden;
+}
+.primary-header__marker {
+  width: 4px;
+  height: 40px;
+  margin-left: -1px;
+  background: #41f6d7;
+  border-radius: 2px;
+  border: none;
+}
+.primary-header__text{
+  font-size: 2rem;
+  letter-spacing: -0.6px;
+}
